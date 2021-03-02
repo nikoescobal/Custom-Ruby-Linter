@@ -27,3 +27,10 @@ class Linter
     #   # puts line.split(";")[0]
     # end
   end
+
+  def hex_case(line, number)
+    hex = line.split("#")[1]
+    if hex == hex.upcase
+      puts "#{hex} is uppercase on line #{number}"
+    end
+  end
