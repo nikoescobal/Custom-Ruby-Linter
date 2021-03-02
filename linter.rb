@@ -34,3 +34,34 @@ class Linter
       puts "#{hex} is uppercase on line #{number}"
     end
   end
+
+      # color-hex-case: Specify lowercase or uppercase for hex colors (Autofixable).
+
+    # bad code
+
+    # a { color: #FFF; }
+
+    # good code
+
+    # a { color: #fff; }
+
+    # bad code
+
+    # a { color: #fff; }
+
+    # good code 
+
+    # a { color: #000; }
+
+
+
+    # color-hex-length: Specify short or long notation for hex colors (Autofixable).
+
+    # a { color: #FFF; }
+
+
+end
+# File.open(style.css, "r") do |file|
+# end
+linter = Linter.new()
+linter.run_check
