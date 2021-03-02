@@ -18,3 +18,12 @@ class Linter
       end
     end
   end
+
+  def trailing_spaces(line, number)
+    line_end = line.split(";")[0]
+    puts line.split(";")[0]
+    # if !line_end.nil?
+    #   puts "Trailing spaces detected on line #{number}."
+    #   # puts line.split(";")[0]
+    # end
+  end
