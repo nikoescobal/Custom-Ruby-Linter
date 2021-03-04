@@ -21,10 +21,10 @@ p {
 }
 
 span {
-  line-height: .5;
+  line-height: .5px;
 }
 
 footer {
-  font-weight: bold;
+  font-weight: 12px;
 }
  

@@ -9,13 +9,13 @@ class Linter
     i = 0
     File.foreach(@url) do |line|
       i += 1
-      check_hex_case(line, i)
-      check_trailing_spaces(line, i)
-      check_braces(line, i)
-      check_semicolons(line, i)
-      check_decimals(line, i)
-      check_font_weight(line, i)
-      check_comma_spaces(line, i)
+      # check_hex_case(line, i)
+      # check_trailing_spaces(line, i)
+      # check_braces(line, i)
+      # check_semicolons(line, i)
+      # check_decimals(line, i)
+      # check_font_weight(line, i)
+      # check_comma_spaces(line, i)
       check_leading_zeros(line, i)
     end
     return @errors.sort{|el1, el2| el2 <=> el1}
@@ -62,9 +62,9 @@ class Linter
   end
 
   def check_font_weight(line, number)
-    @errors << "Font weight should be numeric on line #{number}." if line.include?('font-weight') && line.match(/\D/)
+    @errors << "Font weight should be numeric on line #{number}." if line.include?('font-weight') && !line.match(/\d/i)
   end
-  
+
   def check_comma_spaces(line, number)
     if line.include?(',')
       val = line.split(',')[1]
