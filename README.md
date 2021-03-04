@@ -1,7 +1,9 @@
 # Ruby Capstone Project
 ## A Customized CSS Linter built with Ruby & Object Oriented Programming (OOP)
 
-The objective of this capstone project was to demonstrate mastery of key concepts in object oriented programming by writing classes, methods, and accessing their attributes. Here, I created an executable CSS linter program that detects style issues within the css file, and provides detailed feedback on how to fix them. 
+The objective of this capstone project was to demonstrate mastery of key concepts in object oriented programming by writing classes, methods, and accessing their attributes. 
+
+Here, I created an executable CSS linter program that detects style issues within the css file, and provides detailed feedback on how to fix them. 
 
 <img width="1436" alt="Screen Shot 2021-03-04 at 9 38 07 PM" src="https://user-images.githubusercontent.com/62937819/109972102-ebed5080-7d31-11eb-8664-5b717d8d0b51.png">
 
@@ -11,6 +13,7 @@ The objective of this capstone project was to demonstrate mastery of key concept
 Upon executing the program, the user will be given detailed on feedback on whether their CSS file adopts proper style conventions on the following:
 
 ### ***Hex Case***
+*- hex values should always be lowercase.*
 
 > **Bad code:**
 ```
@@ -28,6 +31,7 @@ body {
 ```
 
 ### ***Trailing Spaces***
+*- There should be no trailing empty spaces in every line.*
 
 > **Bad code:**
 ```
@@ -46,6 +50,7 @@ footer {
 ```
 
 ### ***Braces On Same Line***
+*- Each brace should be on a new line.*
 
 > **Bad code:**
 ```
@@ -63,6 +68,7 @@ font-size: 10px;
 ```
 
 ### ***Extra Semicolons***
+*- There should be no extra semicolons after each line.*
 
 > **Bad code:**
 ```
@@ -80,6 +86,7 @@ font-size: 10px;
 ```
 
 ### ***Decimal Placement***
+*- There should be a max of two decimal places.*
 
 > **Bad code:**
 ```
@@ -97,6 +104,7 @@ font-size: 10px;
 ```
 
 ### ***Font Weight***
+*- Font weight should be a numeric value.*
 
 > **Bad code:**
 ```
@@ -114,6 +122,7 @@ footer {
 ```
 
 ### ***Comma Spaces***
+*- There should be a space after the comma.*
 
 > **Bad code:**
 ```
@@ -131,6 +140,7 @@ p {
 ```
 
 ### ***Leading Zeros***
+*- There should be a zero before each decimal point.*
 
 > **Bad code:**
 ```
