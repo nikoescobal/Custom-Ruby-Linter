@@ -6,20 +6,146 @@ The objective of this capstone project was to demonstrate mastery of key concept
 <img width="1436" alt="Screen Shot 2021-03-04 at 9 38 07 PM" src="https://user-images.githubusercontent.com/62937819/109972102-ebed5080-7d31-11eb-8664-5b717d8d0b51.png">
 
 
-
 ## Project Description: 
 
 Upon executing the program, the user will be given detailed on feedback on whether their CSS file adopts proper style conventions on the following:
 
-- hex case
-- trailing spaces
-- braces
-- semicolons
-- decimal placement
-- font weight
-- comma spaces
-- leading zeros
+### ***Hex Case***
 
+> **Bad code:**
+```
+body { 
+  background: #FFF;
+}
+```
+
+> **Good code:**
+
+```
+body { 
+  background: #fff;
+}
+```
+
+### ***Trailing Spaces***
+
+> **Bad code:**
+```
+footer {
+  font-weight: 12px;
+} 
+
+```
+
+> **Good code:**
+
+```
+footer {
+  font-weight: 12px;
+}
+```
+
+### ***Braces On Same Line***
+
+> **Bad code:**
+```
+a {font-size: 10px;}
+
+```
+
+> **Good code:**
+
+```
+a {
+font-size: 10px;
+}
+
+```
+
+### ***Extra Semicolons***
+
+> **Bad code:**
+```
+.btn {
+  padding: 5px;;
+}
+```
+
+> **Good code:**
+
+```
+.btn {
+  padding: 5px;
+}
+```
+
+### ***Decimal Placement***
+
+> **Bad code:**
+```
+#wrapper {
+  margin: 3.0000px;
+}
+```
+
+> **Good code:**
+
+```
+#wrapper {
+  margin: 3.00px;
+}
+```
+
+### ***Font Weight***
+
+> **Bad code:**
+```
+footer {
+  font-weight: bold;
+}
+```
+
+> **Good code:**
+
+```
+footer {
+  font-weight: 16px;
+}
+```
+
+### ***Comma Spaces***
+
+> **Bad code:**
+```
+p {
+  transform: translate(1px,1px);
+}
+```
+
+> **Good code:**
+
+```
+p {
+  transform: translate(1px, 1px);
+}
+```
+
+### ***Leading Zeros***
+
+> **Bad code:**
+```
+span {
+  line-height: .5px;
+}
+```
+
+> **Good code:**
+
+```
+span {
+  line-height: 0.5px;
+}
+```
 
 ## Built with
 
