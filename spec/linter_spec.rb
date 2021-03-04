@@ -148,6 +148,7 @@ describe Linter do
   end
 
   describe '#run_check' do
+    linter = Linter.new("./spec/linter.css")
     it 'runs the linter checks' do
       expect(linter.run_check.class).to eq(Array)
     end
