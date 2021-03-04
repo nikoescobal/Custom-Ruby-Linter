@@ -1,0 +1,30 @@
+body { 
+  background: #FFF;
+}
+
+a {
+  font-size: 10px;
+ }
+
+a {font-size: 10px;}
+
+.btn {
+  padding: 5px;;
+}
+
+#wrapper {
+  margin: 3.0000px;
+}
+
+p {
+  transform: translate(1px,1px);
+}
+
+span {
+  line-height: .5;
+}
+
+footer {
+  font-weight: bold;
+}
+ 
