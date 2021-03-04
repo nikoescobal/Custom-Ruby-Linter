@@ -46,11 +46,12 @@ class Linter
 
   def check_decimals(line, number)
     return unless line.include?(':')
-      val = line.split(':')[1]
-      decimals = val.gsub(/[^\d,.]/i, '')
-      if decimals.include?('.') && decimals.split('.')[1].length > 2
-        @errors << "Max decimal places should be limited to 2 on line #{number}."
-      end
+
+    val = line.split(':')[1]
+    decimals = val.gsub(/[^\d,.]/i, '')
+    return unless decimals.include?('.') && decimals.split('.')[1].length > 2
+
+    @errors << "Max decimal places should be limited to 2 on line #{number}."
   end
 
   def check_font_weight(line, number)
@@ -59,14 +60,16 @@ class Linter
 
   def check_comma_spaces(line, number)
     return unless line.include?(',')
-      val = line.split(',')[1]
-      @errors << "There should be a space after the comma on line #{number}." if val[0] != ' '
-    end
+
+    val = line.split(',')[1]
+    @errors << "There should be a space after the comma on line #{number}." if val[0] != ' '
+  end
 
   def check_leading_zeros(line, number)
     return unless line.include?(':')
-      val = line.split(':')[1]
-      decimals = val.gsub(/[^\d,.]/i, '')
-      @errors << "There should be a zero before the decimal point on line #{number}." if decimals[0] == '.'
-    end
+
+    val = line.split(':')[1]
+    decimals = val.gsub(/[^\d,.]/i, '')
+    @errors << "There should be a zero before the decimal point on line #{number}." if decimals[0] == '.'
+  end
 end
