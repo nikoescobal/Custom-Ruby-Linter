@@ -1,4 +1,4 @@
-body {
+body { 
   background: #FFF;
 }
 
@@ -6,26 +6,25 @@ a {
   font-size: 10px;
  }
 
-a {
-  font-size: 10px;
-}
+a {font-size: 10px;}
 
 .btn {
-  padding: 5px;
+  padding: 5px;;
 }
 
 #wrapper {
-  margin: 3.00px;
+  margin: 3.0000px;
 }
 
 p {
-  transform: translate(1px, 1px);
+  transform: translate(1px,1px);
 }
 
 span {
-  line-height: 0.5px;
+  line-height: .5px;
 }
 
 footer {
-  font-weight: 12px;
+  font-weight: bold;
 }
+ 
