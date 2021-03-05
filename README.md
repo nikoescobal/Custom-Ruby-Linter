@@ -174,15 +174,15 @@ In order to run the linter on your local machine, please run the following comma
 
 > 1. run `git clone git@github.com:nikoescobal/Custom-Ruby-Linter.git`
 > 2. run `cd Custom-Ruby-Linter`
-> 3. run `bundle` 
 > 3. run `ruby bin/main.rb` to run the linter checks
 > 4. Happy linting!
 
 ### Testing 
 
-After you've entered `run bundle`, you can run the following command on your terminal to test the code: 
+You can run the following commands on your terminal to test the code: 
 
-> run `rspec`
+> 1. run `gem install rspec`
+> 2. run `rspec` within the root folder
 
 ## Author:
 
