@@ -1,5 +1,3 @@
-require 'colorize'
-
 class Linter
   attr_reader :url, :errors
 
@@ -22,7 +20,7 @@ class Linter
       check_leading_zeros(line, i)
     end
     if @errors.length.zero?
-      @errors << 'All checks have passed! No errors detected.'.colorize(:green)
+      @errors << 'All checks have passed! No errors detected.'
     else
       @errors.sort { |el1, el2| el2 <=> el1 }
     end
@@ -34,20 +32,20 @@ class Linter
     return unless line.include?('#')
 
     hex = line.split('#')[1].gsub(/\W/, '')
-    @errors << "##{hex} should be lowercase on line #{number}.".colorize(:red) if hex == hex.upcase
+    @errors << "##{hex} should be lowercase on line #{number}." if hex == hex.upcase
   end
 
   def check_trailing_spaces(line, number)
     stripped_line = line.delete("\n")
-    @errors << "Trailing spaces detected on line #{number}.".colorize(:red) if stripped_line.end_with?(' ')
+    @errors << "Trailing spaces detected on line #{number}." if stripped_line.end_with?(' ')
   end
 
   def check_braces(line, number)
-    @errors << "Two braces detected on line #{number}.".colorize(:red) if line.include?('{') && line.include?('}')
+    @errors << "Two braces detected on line #{number}." if line.include?('{') && line.include?('}')
   end
 
   def check_semicolons(line, number)
-    @errors << "Extra semicolon detected on line #{number}.".colorize(:red) if line.include?(';;')
+    @errors << "Extra semicolon detected on line #{number}." if line.include?(';;')
   end
 
   def check_decimals(line, number)
@@ -57,20 +55,20 @@ class Linter
     decimals = val.gsub(/[^\d,.]/i, '')
     return unless decimals.include?('.') && decimals.split('.')[1].length > 2
 
-    @errors << "Max decimal places should be limited to 2 on line #{number}.".colorize(:red)
+    @errors << "Max decimal places should be limited to 2 on line #{number}."
   end
 
   def check_font_weight(line, number)
     return unless line.include?('font-weight') && !line.match(/\d/i)
 
-    @errors << "Font weight should be numeric on line #{number}.".colorize(:red)
+    @errors << "Font weight should be numeric on line #{number}."
   end
 
   def check_comma_spaces(line, number)
     return unless line.include?(',')
 
     val = line.split(',')[1]
-    @errors << "There should be a space after the comma on line #{number}.".colorize(:red) if val[0] != ' '
+    @errors << "There should be a space after the comma on line #{number}." if val[0] != ' '
   end
 
   def check_leading_zeros(line, number)
@@ -78,6 +76,6 @@ class Linter
 
     val = line.split(':')[1]
     decimals = val.gsub(/[^\d,.]/i, '')
-    @errors << "There should be a zero before the decimal point on line #{number}.".colorize(:red) if decimals[0] == '.'
+    @errors << "There should be a zero before the decimal point on line #{number}." if decimals[0] == '.'
   end
 end
