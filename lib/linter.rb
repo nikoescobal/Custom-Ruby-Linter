@@ -21,8 +21,8 @@ class Linter
       check_comma_spaces(line, i)
       check_leading_zeros(line, i)
     end
-    if @errors.length == 0
-      @errors << "All checks have passed! No errors detected.".colorize(:green)
+    if @errors.length.zero?
+      @errors << 'All checks have passed! No errors detected.'.colorize(:green)
     else
       @errors.sort { |el1, el2| el2 <=> el1 }
     end
@@ -61,7 +61,9 @@ class Linter
   end
 
   def check_font_weight(line, number)
-    @errors << "Font weight should be numeric on line #{number}.".colorize(:red) if line.include?('font-weight') && !line.match(/\d/i)
+    return unless line.include?('font-weight') && !line.match(/\d/i)
+
+    @errors << "Font weight should be numeric on line #{number}.".colorize(:red)
   end
 
   def check_comma_spaces(line, number)
