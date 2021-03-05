@@ -5,7 +5,7 @@ describe Linter do
     linter = Linter.new('./spec/linter.css')
     it 'checks if the hex case is incorrect' do
       r = linter.send(:check_hex_case, '#FFF', 5)
-      expect(r).to eq(['#FFF should be lowercase on line 5.'])
+      expect(r).to eq(["\e[0;31;49m#FFF should be lowercase on line 5.\e[0m"])
     end
 
     it 'checks the hex case class' do
@@ -23,7 +23,7 @@ describe Linter do
     linter = Linter.new('./spec/linter.css')
     it 'checks if there are any trailing spaces' do
       r = linter.send(:check_trailing_spaces, ' ', 15)
-      expect(r).to eq(['Trailing spaces detected on line 15.'])
+      expect(r).to eq(["\e[0;31;49mTrailing spaces detected on line 15.\e[0m"])
     end
 
     it 'checks the trailing_spaces class' do
@@ -41,7 +41,7 @@ describe Linter do
     linter = Linter.new('./spec/linter.css')
     it 'checks if there are two braces on the same line' do
       r = linter.send(:check_braces, '{}', 6)
-      expect(r).to eq(['Two braces detected on line 6.'])
+      expect(r).to eq(["\e[0;31;49mTwo braces detected on line 6.\e[0m"])
     end
 
     it 'checks the check_braces class' do
@@ -59,7 +59,7 @@ describe Linter do
     linter = Linter.new('./spec/linter.css')
     it 'checks if there are extra semicolons' do
       r = linter.send(:check_semicolons, ';;', 24)
-      expect(r).to eq(['Extra semicolon detected on line 24.'])
+      expect(r).to eq(["\e[0;31;49mExtra semicolon detected on line 24.\e[0m"])
     end
 
     it 'checks the check_semilcolons class' do
@@ -77,7 +77,7 @@ describe Linter do
     linter = Linter.new('./spec/linter.css')
     it 'checks for incorrect decimal placement in each line' do
       r = linter.send(:check_decimals, ':2.000', 7)
-      expect(r).to eq(['Max decimal places should be limited to 2 on line 7.'])
+      expect(r).to eq(["\e[0;31;49mMax decimal places should be limited to 2 on line 7.\e[0m"])
     end
 
     it 'checks the check_decimals class' do
@@ -95,7 +95,7 @@ describe Linter do
     linter = Linter.new('./spec/linter.css')
     it 'checks if the font weight is incorrect' do
       r = linter.send(:check_font_weight, 'font-weight: italic', 25)
-      expect(r).to eq(['Font weight should be numeric on line 25.'])
+      expect(r).to eq(["\e[0;31;49mFont weight should be numeric on line 25.\e[0m"])
     end
 
     it 'checks the check_font_weight class' do
@@ -113,7 +113,7 @@ describe Linter do
     linter = Linter.new('./spec/linter.css')
     it 'checks if there is a missing space after each comma' do
       r = linter.send(:check_comma_spaces, ',1px', 3)
-      expect(r).to eq(['There should be a space after the comma on line 3.'])
+      expect(r).to eq(["\e[0;31;49mThere should be a space after the comma on line 3.\e[0m"])
     end
 
     it 'checks the check_comma_spaces class' do
@@ -131,7 +131,7 @@ describe Linter do
     linter = Linter.new('./spec/linter.css')
     it 'checks the if there are any leading zeros' do
       r = linter.send(:check_leading_zeros, ':.5', 24)
-      expect(r).to eq(['There should be a zero before the decimal point on line 24.'])
+      expect(r).to eq(["\e[0;31;49mThere should be a zero before the decimal point on line 24.\e[0m"])
     end
 
     it 'checks the check_leading_zeros class' do
