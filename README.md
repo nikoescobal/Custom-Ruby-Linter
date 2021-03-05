@@ -3,9 +3,9 @@
 
 The objective of this capstone project was to demonstrate mastery of key concepts in object oriented programming by writing classes, methods, and accessing their attributes. 
 
-Here, I created an executable CSS linter program that detects style issues within the css file, and provides detailed feedback on how to fix them. 
+Here, I created an executable CSS linter program that detects style issues within the css file, and provides detailed feedback on how to fix them. The user can also edit their CSS file as they please.
 
-<img width="1436" alt="Screen Shot 2021-03-04 at 9 38 07 PM" src="https://user-images.githubusercontent.com/62937819/109972102-ebed5080-7d31-11eb-8664-5b717d8d0b51.png">
+<img width="1437" alt="Screen Shot 2021-03-05 at 6 27 59 PM" src="https://user-images.githubusercontent.com/62937819/110104368-0a128980-7de2-11eb-8821-d29635309e9c.png">
 
 
 ## Project Description: 
@@ -174,8 +174,15 @@ In order to run the linter on your local machine, please run the following comma
 
 > 1. run `git clone git@github.com:nikoescobal/Custom-Ruby-Linter.git`
 > 2. run `cd Custom-Ruby-Linter`
+> 3. run `bundle` 
 > 3. run `ruby bin/main.rb` to run the linter checks
-> 4. Enjoy!
+> 4. Happy linting!
+
+### Testing 
+
+After you've entered `run bundle`, you can run the following command on your terminal to test the code: 
+
+> run `rspec`
 
 ## Author:
 
