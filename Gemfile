@@ -1,7 +1,10 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-gem 'colorize'
+source "https://rubygems.org"
+
+# git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+em 'colorize'
 gem 'rspec'
 gem 'rubocop'
 
-# Ruby version - ruby 2.7.2
