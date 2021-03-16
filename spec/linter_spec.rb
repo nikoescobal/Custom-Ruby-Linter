@@ -1,5 +1,4 @@
 require_relative '../lib/linter'
-require 'colorize'
 
 describe Linter do
   describe '#check_hex_case' do
