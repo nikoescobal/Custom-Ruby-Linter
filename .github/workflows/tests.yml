@@ -15,5 +15,6 @@ jobs:
         run: |
           [ -f Gemfile ] && bundle --deployment
           gem install --no-document rspec:'~>3.0'
+          gem install colorize
       - name: RSpec Report
         run: rspec --force-color --format documentation
